@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login Page</title>
+</head>
+{% load static %}
+<link rel="stylesheet" href="/static/css/style.css"/>
+
+<body>
+    <div class="container">
+        <form action="#" method="post">
+            {% csrf_token %}
+            <h1>Login</h1>
+
+            <div class="input-box">
+                <input type="name" name="username" placeholder="Email Username" id="username">
+            </div>
+
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Enter Password" id="password">
+            </div>
+
+            <div class="remember-forget">
+                <label><input type="checkbox" /> Remember Me</label>
+                <a href="#">Forgot Password ?</a>
+            </div>
+
+            <button type="submit" class="btn">Log In</button>
+
+            <div class="registration-link">
+                <p>Dont have an Account? <a href="/signup">Sign Up</a></p>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
